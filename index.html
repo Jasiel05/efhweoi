@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>¡Duelo por Helado!</title>
+<link rel="stylesheet" href="css/style.css">
+<!-- Three.js local: libs/build/ y libs/jsm/ (copiados del ZIP de three.js) -->
+<script type="importmap">
+{"imports":{"three":"./libs/build/three.module.js","three/addons/":"./libs/jsm/"}}
+</script>
+</head>
+<body>
+<div id="stage">
+  <aside id="left" class="panel">
+    <h1>¡DUELO POR HELADO!</h1>
+    <div class="blk"><h2>PUNTAJE</h2><div id="score">0000000</div></div>
+    <div class="blk"><h2>VIDAS (Stella)</h2><div id="lives" class="row"></div></div>
+    <div class="blk"><h2>BOMBAS</h2><div id="bombs" class="row"></div></div>
+    <div class="blk"><h2>ESTADO DEL HELADO</h2>
+      <div id="ice"></div><div id="meltTxt"></div>
+      <div class="bar"><i id="meltFill" class="mint"></i></div></div>
+  </aside>
+  <main id="center"><canvas id="game"></canvas><div id="flash"></div></main>
+  <aside id="right" class="panel">
+    <div class="blk"><h2>VIDA DE Vesper</h2>
+      <div class="row"><span id="vL"></span><div class="bar grow"><i id="bossFill" class="red"></i></div><span id="vR"></span></div></div>
+    <div class="blk"><h2>FASE ACTUAL</h2><div id="phase" class="big">FASE 1</div></div>
+    <div class="blk"><h2>NIVEL DE RUIDO</h2><div id="noise" class="big">Tranquilo</div></div>
+    <div class="blk"><h2>CORAJE DE Vesper</h2><div class="bar"><i id="courage" class="orange"></i></div></div>
+    <p class="help">Mover: flechas / WASD<br>Disparar: Z o Espacio<br>Precisión: Shift<br>Bomba: X · Pausa: P</p>
+  </aside>
+  <div id="overlay"></div>
+</div>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
